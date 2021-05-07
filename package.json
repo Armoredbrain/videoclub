@@ -1,0 +1,37 @@
+{
+  "name": "neomanis-backend",
+  "version": "1.0.0",
+  "description": "Simple backend for neomanis technical test",
+  "main": "index.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node index.js",
+    "fixJson": "node fixJson.js",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
+    "node": "^16.1.0"
+  }
+}
