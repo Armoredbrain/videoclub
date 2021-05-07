@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "dev": "node index.js",
-    "fixJson": "node fixJson.js",
+    "fixJson": "node fixDataFile.js",
     "test": "jest"
   },
   "husky": {
@@ -32,6 +32,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1",
-    "node": "^16.1.0"
+    "node": "^16.1.0",
+    "prettier": "^2.2.1"
   }
 }
