@@ -6,7 +6,8 @@ const jsonDataFix = [];
 
 const accentCorrector = (dataObject) => {
   const jsonString = JSON.stringify(dataObject);
-  const jsonStringFix = jsonString.replaceAll('âe', 'é')
+  const jsonStringFix = jsonString
+    .replaceAll('âe', 'é')
     .replaceAll('áa', 'à')
     .replaceAll('áe', 'è')
     .replaceAll('ãa', 'â')
@@ -23,18 +24,17 @@ const accentCorrector = (dataObject) => {
 
 const jsonWriter = (json) => {
   const jsonString = JSON.stringify(json, null, 2);
-  fs.writeFile('moviesFix.json', jsonString, (err) => {
-    if (err) {
-      console.error(err);
+  fs.writeFile('./assets/movies.json', jsonString, (error) => {
+    if (error) {
+      console.info(error);
     } else {
       console.info('Data fixed');
     }
   });
 };
 
-fs.createReadStream('./movies.csv')
-  .on('error', () => {
-  })
+fs.createReadStream('./assets/movies.csv')
+  .on('error', () => {})
   .pipe(csvtojson({ delimiter: ';', checkType: true }))
   .on('data', (row) => {
     const parseAndFixRow = accentCorrector(JSON.parse(row));
