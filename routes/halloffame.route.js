@@ -3,25 +3,22 @@ const Movie = require('../models/movie');
 
 const hallOfFameRouter = express.Router();
 
-hallOfFameRouter.route('/editor').get((request, response) => {
-  Movie.where('nbre_de_prets')
-    .gte(1)
-    .sort({ nbre_de_prets: -1 })
-    .limit(1)
-    .exec((error, movies) => {
-      if (error) console.error(error);
-      response.json(movies);
-    });
-});
-
 hallOfFameRouter.route('/author').get((request, response) => {
-  Movie.where('nbre_de_prets')
-    .gte(1)
-    .sort({ nbre_de_prets: -1 })
+  const pipeline = [
+    {
+      $group: {
+        _id: '$auteur',
+        total: {
+          $sum: '$nbre_de_prets',
+        },
+      },
+    },
+  ];
+  Movie.aggregate(pipeline)
+    .sort({ total: -1 })
     .limit(1)
-    .exec((error, movies) => {
-      if (error) console.error(error);
-      response.json(movies);
+    .exec((error, authors) => {
+      return error ? console.error(error) : response.json(authors);
     });
 });
 
