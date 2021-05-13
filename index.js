@@ -7,7 +7,6 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 
-// Connect to MongoDB
 mongoose
   .connect('mongodb://mongodb:27017/videoclub', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))

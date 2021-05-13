@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "c692ae62-526f-4244-93b2-0e482555c4f8",
+		"name": "videoclub-api-routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all movies filtered by partial title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/the",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"the"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hall of Fame",
+			"item": [
+				{
+					"name": "best movie of all time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/halloffames/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halloffames",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "best movie for a specific year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/halloffames/movie/2013",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halloffames",
+								"movie",
+								"2013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "best 100 movies of all time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/halloffames/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halloffames",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "best 100 movie for a specific year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/halloffames/movies/2017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halloffames",
+								"movies",
+								"2017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "best rented author of all time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/halloffames/author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halloffames",
+								"author"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
