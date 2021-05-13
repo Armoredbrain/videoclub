@@ -13,9 +13,8 @@ mongoose
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.log(err));
 
-const port = 3000;
-
 app.use('/movies', movieRouter);
 app.use('/halloffames', hallOfFameRouter);
 
+const port = 3000;
 app.listen(port, () => console.log(`Server running on port:${port}...`));
