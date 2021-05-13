@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const movieRouter = require('./routes/movie.route');
-const hallOfFameRouter = require('./routes/halloffame.route');
+const hallOfFameRouter = require('./routes/hallOfFame.route');
 
 const app = express();
 
