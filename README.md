@@ -4,13 +4,13 @@
 Here you will find a simple API for a videoclub, It is running on two containers
 
 ## Installation
-git clone <repo>
-cd videoclub-backend 
-yarn install
-docker-compose up >>> will setup start two containers, one for node and one for mongodb
-yarn fixDataCsvToJson >>> will convert csv to json and correct accent error
-yarn db:copyJsonToContainer >>> will copy movies.json to mongodb container
-yarn db:populateDbWithJson >>> will populate db with movie data from movies.json
+* git clone git@github.com:Armoredbrain/videoclub.git
+* cd videoclub-backend 
+* yarn install
+* docker-compose up >>> will setup start two containers, one for node and one for mongodb
+* yarn file:fixDataCsvToJson >>> will convert csv to json and correct accent error
+* yarn db:copyJsonToContainer >>> will copy movies.json to mongodb container
+* yarn db:populateDbWithJson >>> will populate db with movie data from movies.json
 
 Your videoclub API is ready to use on port 3000! :rocket:
 
@@ -23,12 +23,13 @@ Your videoclub API is ready to use on port 3000! :rocket:
 * /halloffame/movie/`year` --> Get the most top rented movie for a specific year
 * /halloffame/author --> Get the author of the most rented movies for all time
 
-## Future improvement
+## Future improvements
 * add post request to add movie
 * add update request to change value of `nbre_de_prets` for a specific movie during a specific year
-* add more tests to have a better coverage
+* add tests
 * automatize launch with a bash script
 * setup travis
 * move logic currently in route to a manager
 * add middlewares to check request and response (mainly for security)
 * add logger to uniformize console log
+* take advantage of mongodb graph capabilities to replace some JS logic

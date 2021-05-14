@@ -8,7 +8,7 @@
     "start": "nodemon -L index.js",
     "db:copyJsonToContainer": "docker cp ./assets/movies.json videoclub-backend_mongodb_1:movies.json",
     "db:populateDbWithJson": "docker exec -it videoclub-backend_mongodb_1 mongoimport -d videoclub -c movies --type json --file movies.json --jsonArray",
-    "fixDataCsvToJson": "node ./utils/fixDataCsvToJson.js",
+    "file:fixDataCsvToJson": "node ./utils/fixDataCsvToJson.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
