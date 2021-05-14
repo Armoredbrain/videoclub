@@ -4,7 +4,7 @@
 Here you will find a simple API for a videoclub, It is running on two containers
 
 ## Installation
-* git clone git@github.com:Armoredbrain/videoclub.git videoclub-backend
+* `git clone git@github.com:Armoredbrain/videoclub.git videoclub-backend`
 * cd videoclub-backend 
 * yarn install
 * docker-compose up >>> will setup start two containers, one for node and one for mongodb
@@ -24,12 +24,12 @@ Your videoclub API is ready to use on port 3000! :rocket:
 * /halloffame/author --> Get the author of the most rented movies for all time
 
 ## Future improvements
+* add .env!
 * add post request to add movie
 * add update request to change value of `nbre_de_prets` for a specific movie during a specific year
 * add tests
 * automatize launch with a bash script
-* setup travis
-* move logic currently in route to a manager
+* setup travis (might be vast)
 * add middlewares to check request and response (mainly for security)
 * add logger to uniformize console log
 * take advantage of mongodb graph capabilities to replace some JS logic

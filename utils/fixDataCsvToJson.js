@@ -17,8 +17,8 @@ const accentCorrector = (dataObject) => {
     .replaceAll('èi', 'ï')
     .replaceAll('èe', 'ë')
     .replaceAll('èu', 'ü')
-    .replaceAll('ðc', 'ç');
-
+    .replaceAll('ðc', 'ç')
+    .replaceAll('ão', 'ô');
   return JSON.parse(jsonStringFix);
 };
 
