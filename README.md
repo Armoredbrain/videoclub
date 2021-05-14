@@ -7,10 +7,10 @@ Here you will find a simple API for a videoclub, It is running on two containers
 * git clone git@github.com:Armoredbrain/videoclub.git videoclub-backend
 * cd videoclub-backend 
 * yarn install
-* docker-compose up >>> will setup start two containers, one for node and one for mongodb
-* yarn file:fixDataCsvToJson >>> will convert csv to json and correct accent error
-* yarn db:copyJsonToContainer >>> will copy movies.json to mongodb container
-* yarn db:populateDbWithJson >>> will populate db with movie data from movies.json
+* docker-compose up --> will setup start two containers, one for node and one for mongodb
+* yarn file:fixDataCsvToJson --> will convert csv to json and correct accent error
+* yarn db:copyJsonToContainer --> will copy movies.json to mongodb container
+* yarn db:populateDbWithJson --> will populate db with movie data from movies.json
 
 Your videoclub API is ready to use on port 3000! :rocket:
 
