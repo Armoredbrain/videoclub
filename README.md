@@ -4,7 +4,7 @@
 Here you will find a simple API for a videoclub, It is running on two containers
 
 ## Installation
-* git clone git@github.com:Armoredbrain/videoclub.git
+* git clone git@github.com:Armoredbrain/videoclub.git videoclub-backend
 * cd videoclub-backend 
 * yarn install
 * docker-compose up >>> will setup start two containers, one for node and one for mongodb
