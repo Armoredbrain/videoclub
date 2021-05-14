@@ -1,8 +1,9 @@
-const { fixAndSaveData } = require('./fixDataCsvToJson');
+const { fixAndSaveData } = require('../../utils/fixDataCsvToJson');
 const outputFile = require('../assets/moviesTest.json');
 
-const inputPath = '../assets/moviesTest.csv';
-const outputPath = '../assets/moviesTest.json';
+const inputPath = './tests/assets/moviesTest.csv';
+const outputPath = './tests/assets/moviesTest.json';
+
 const expectedOutput = [
   {
     annee: 2020,
@@ -139,8 +140,8 @@ const expectedOutput = [
 ];
 
 describe('fixing and saving csv file to json', () => {
-  it('should replace character pattern with accent character', () => {
-    fixAndSaveData(inputPath, outputPath);
+  it('should replace character pattern with accent character', async () => {
+    await fixAndSaveData(inputPath, outputPath);
     expect(outputFile).toEqual(expectedOutput);
   });
 });

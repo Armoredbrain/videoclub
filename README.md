@@ -27,7 +27,8 @@ Your videoclub API is ready to use on port 3000! :rocket:
 * add .env!
 * add post request to add movie
 * add update request to change value of `nbre_de_prets` for a specific movie during a specific year
-* add tests
+* add way more tests to have a better coverage
+* test api routes
 * automatize launch with a bash script
 * setup travis (might be vast)
 * add middlewares to check request and response (mainly for security)
