@@ -1,19 +1,8 @@
 const express = require('express');
 const Movie = require('../models/movie');
+const { removeDuplicateTitle } = require('../managers/movie');
 
 const movieRouter = express.Router();
-
-const removeDuplicateTitle = (objects) => {
-  const flag = {};
-  const unique = [];
-  objects.forEach((element) => {
-    if (!flag[element.titre]) {
-      flag[element.titre] = true;
-      unique.push(element);
-    }
-  });
-  return unique;
-};
 
 movieRouter.route('/').get((request, response) => {
   Movie.find({}, (error, movies) => {
