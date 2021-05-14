@@ -24,14 +24,11 @@ Your videoclub API is ready to use on port 3000! :rocket:
 * /halloffame/author --> Get the author of the most rented movies for all time
 
 ## Future improvements
+* add .env!
 * add post request to add movie
 * add update request to change value of `nbre_de_prets` for a specific movie during a specific year
-<<<<<<< HEAD
-* add tests
-=======
 * add way more tests to have a better coverage
 * test api routes
->>>>>>> c216d51 (add tests for utils and manager function, and reorganize folder structure)
 * automatize launch with a bash script
 * setup travis
 * add middlewares to check request and response (mainly for security)
