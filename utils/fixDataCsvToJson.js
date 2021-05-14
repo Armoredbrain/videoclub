@@ -4,9 +4,11 @@ const csvtojson = require('csvtojson');
 
 const jsonDataFix = [];
 
-const fixAndSaveData = (inputPath, outputPath) => {
+const fixAndSaveData = async (inputPath, outputPath) => {
   fs.createReadStream(inputPath)
-    .on('error', () => {})
+    .on('error', (error) => {
+      console.error(error);
+    })
     .pipe(csvtojson({ delimiter: ';', checkType: true }))
     .on('data', (row) => {
       const jsonRow = JSON.stringify(JSON.parse(row))
@@ -33,8 +35,6 @@ const fixAndSaveData = (inputPath, outputPath) => {
       });
     });
 };
-
-fixAndSaveData('./assets/moviesTest.csv', './assets/moviesTest.json');
 
 module.exports = {
   fixAndSaveData,

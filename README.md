@@ -26,10 +26,14 @@ Your videoclub API is ready to use on port 3000! :rocket:
 ## Future improvements
 * add post request to add movie
 * add update request to change value of `nbre_de_prets` for a specific movie during a specific year
+<<<<<<< HEAD
 * add tests
+=======
+* add way more tests to have a better coverage
+* test api routes
+>>>>>>> c216d51 (add tests for utils and manager function, and reorganize folder structure)
 * automatize launch with a bash script
 * setup travis
-* move logic currently in route to a manager
 * add middlewares to check request and response (mainly for security)
 * add logger to uniformize console log
 * take advantage of mongodb graph capabilities to replace some JS logic
