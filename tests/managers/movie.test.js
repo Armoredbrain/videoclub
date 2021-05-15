@@ -11,7 +11,7 @@ const objectArray = [
     titre: 'Vice-Versa',
   },
   {
-    titre: 'Kudo',
+    titre: 'Kubo',
   },
 ];
 
@@ -26,7 +26,7 @@ describe('remove movie duplicate function', () => {
         titre: 'Vice-Versa',
       },
       {
-        titre: 'Kudo',
+        titre: 'Kubo',
       },
     ];
     expect(unique).toEqual(expectedResult);

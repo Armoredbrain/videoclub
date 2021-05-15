@@ -1,10 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const logger = require('./utils/logger');
+
 const movieRouter = require('./routes/movie.route');
 const hallOfFameRouter = require('./routes/hallOfFame.route');
 
 const app = express();
 
+app.use(morgan('combined', { stream: logger.stream }));
 app.use(express.urlencoded({ extended: false }));
 
 mongoose
