@@ -1,4 +1,4 @@
-const { fixAndSaveData } = require('../../utils/fixDataCsvToJson');
+const { fixAndSaveData } = require('../../utils/fixAndSaveData');
 const outputFile = require('../assets/moviesTest.json');
 
 const inputPath = './tests/assets/moviesTest.csv';
