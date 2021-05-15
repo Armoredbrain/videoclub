@@ -1,5 +1,6 @@
 const express = require('express');
 const Movie = require('../models/movie');
+const logger = require('../utils/logger');
 
 const hallOfFameRouter = express.Router();
 
@@ -19,7 +20,7 @@ hallOfFameRouter.route('/author').get((request, response) => {
     .limit(1)
     .exec((error, authors) => {
       if (error) {
-        console.error(error);
+        logger.error(error);
         return;
       }
       response.json(authors);
@@ -33,7 +34,7 @@ hallOfFameRouter.route('/movie').get((request, response) => {
     .limit(1)
     .exec((error, movies) => {
       if (error) {
-        console.error(error);
+        logger.error(error);
         return;
       }
       response.json(movies);
@@ -47,7 +48,7 @@ hallOfFameRouter.route('/movie/:year').get((request, response) => {
     .limit(1)
     .exec((error, movies) => {
       if (error) {
-        console.error(error);
+        logger.error(error);
         return;
       }
       response.json(movies);
@@ -61,7 +62,7 @@ hallOfFameRouter.route('/movies').get((request, response) => {
     .limit(100)
     .exec((error, movies) => {
       if (error) {
-        console.error(error);
+        logger.error(error);
         return;
       }
       response.json(movies);
@@ -75,7 +76,7 @@ hallOfFameRouter.route('/movies/:year').get((request, response) => {
     .limit(100)
     .exec((error, movies) => {
       if (error) {
-        console.error(error);
+        logger.error(error);
         return;
       }
       response.json(movies);
