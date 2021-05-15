@@ -13,7 +13,8 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
     "prettier:fix": "prettier --write **/*.js",
-    "test": "jest --config ./jest.config.js"
+    "test": "jest --config ./jest.config.js -i --colors --verbose --detectOpenHandles",
+    "test:watch": "jest --config ./jest.config.js -i --colors --verbose --detectOpenHandles --watchAll"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
@@ -32,7 +33,6 @@
   "dependencies": {
     "csvtojson": "^2.0.10",
     "express": "^4.17.1",
-    "jsonpath": "^1.1.1",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
     "node": "^16.1.0",
