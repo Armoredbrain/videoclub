@@ -13,11 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 
 mongoose
   .connect('mongodb://mongodb:27017/videoclub', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log(err));
+  .then(() => logger.info('MongoDB Connected'))
+  .catch((err) => logger.error(err));
 
 app.use('/movies', movieRouter);
 app.use('/halloffames', hallOfFameRouter);
 
 const port = 3000;
-app.listen(port, () => console.log(`Server running on port:${port}...`));
+app.listen(port, () => logger.info(`Server running on port:${port}...`));
