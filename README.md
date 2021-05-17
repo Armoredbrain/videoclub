@@ -38,4 +38,4 @@ Once done, run `docker-compose up` and your videoclub API is ready to use on por
 * take advantage of mongodb graph capabilities to replace some JS logic
 
 ## Know issues
-* database getting populate over and over if `setup.sh` is ran multiple time, to fix this run `docker exec -it videoclub-backend_mongodb_1 mongo` then `use videoclub` and `db.dropDtabase()`
+* database getting populate over and over if `setup.sh` is ran multiple time, to fix this simply make `dropDb.sh` executable and run it to drop database. Then run `yarn db:populateDbWithJson`
