@@ -1,7 +1,7 @@
 #!/bin/sh
 
 yarn install
-docker-compose up
+docker-compose up -d
 yarn file:fixData
 yarn db:copyJsonToContainer
 yarn db:populateDbWithJson

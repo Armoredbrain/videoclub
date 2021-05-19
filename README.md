@@ -4,7 +4,7 @@
 Here you will find a simple API for a videoclub, It is running on two containers
 
 ## Installation
-* `git clone git@github.com:Armoredbrain/videoclub.git videoclub-backend`
+* `git clone git@github.com:Armoredbrain/videoclub.git`
 * `cd videoclub-backend` 
 * make `setup.sh` executable
 * run `./setup.sh` in terminal
