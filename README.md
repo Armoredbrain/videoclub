@@ -22,11 +22,11 @@ Once done, run `docker-compose up` and your videoclub API is ready to use on por
 ## API routes
 * /movies --> Get all movie list 
 * /movies/`part of title` --> Get the movie list searching by partial title
-* /halloffame/movies --> Get the most top 100 rented movies for all time
-* /halloffame/movies/`year` --> Get the most top 100 rented movie for a specific year
-* /halloffame/movie --> Get the most rented movie for all time
-* /halloffame/movie/`year` --> Get the most top rented movie for a specific year
-* /halloffame/author --> Get the author of the most rented movies for all time
+* /halloffames/movies --> Get the most top 100 rented movies for all time
+* /halloffames/movies/`year` --> Get the most top 100 rented movie for a specific year
+* /halloffames/movie --> Get the most rented movie for all time
+* /halloffames/movie/`year` --> Get the most top rented movie for a specific year
+* /halloffames/author --> Get the author of the most rented movies for all time
 
 ## Future improvements
 * add .env
